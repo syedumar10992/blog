@@ -6,20 +6,20 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']  // Corrected typo here
 })
 export class AppComponent {
   title = 'Blog';
-  getName(name:any)
-  {
-    alert("name");
-  }
-  displayVal='';
-  getValue(val:string)
-  {
-    console.warn(val)
-    this.displayVal=val
+
+  // Adjusted to remove the parameter if it's not used
+  getName(): void {
+    alert('name');
   }
 
+  displayVal = '';
 
+  getValue(val: string): void {
+    console.warn(val);
+    this.displayVal = val;
+  }
 }
