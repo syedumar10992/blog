@@ -9,5 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'blog';
+  title = 'Blog';
+  getName(name:any)
+  {
+    alert("name");
+  }
+  displayVal='';
+  getValue(val:string)
+  {
+    console.warn(val)
+    this.displayVal=val
+  }
+
+
 }
